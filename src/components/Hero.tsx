@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Brain, Zap } from "lucide-react";
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -16,7 +16,14 @@ const Hero = () => {
       <div className="absolute bottom-20 right-10 w-48 h-48 bg-white opacity-5 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
       <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-red-500 opacity-10 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
       
-      <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
+        {/* Rounded badge */}
+        <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
+          <Brain className="text-purple-300" size={24} />
+          <span className="text-lg font-medium">AI Automation Systems</span>
+          <Zap className="text-red-300" size={24} />
+        </div>
+        
         <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in-up">
           AI Automation
           <span className="block bg-gradient-to-r from-purple-300 to-red-300 bg-clip-text text-transparent">
@@ -29,10 +36,10 @@ const Hero = () => {
           Streamline workflows, boost productivity, and scale your operations effortlessly.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button 
             size="lg" 
-            className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-8 py-4"
+            className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-8 py-4 rounded-full"
             onClick={scrollToProducts}
           >
             Explore Products
@@ -40,13 +47,34 @@ const Hero = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="border-white text-white hover:bg-white hover:text-purple-900 text-lg px-8 py-4"
+            className="border-white text-white hover:bg-white hover:text-purple-900 text-lg px-8 py-4 rounded-full"
           >
             Get Started
           </Button>
         </div>
         
-        <div className="mt-12 animate-bounce">
+        {/* Feature cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center">
+            <Brain className="mx-auto mb-4 text-purple-300" size={32} />
+            <h3 className="text-xl font-semibold mb-2">AI-Powered</h3>
+            <p className="text-gray-300 text-sm">Advanced artificial intelligence systems</p>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center">
+            <Zap className="mx-auto mb-4 text-yellow-400" size={32} />
+            <h3 className="text-xl font-semibold mb-2">Fully Automated</h3>
+            <p className="text-gray-300 text-sm">Set it up once, let it work for you</p>
+          </div>
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 text-center">
+            <div className="mx-auto mb-4 w-8 h-8 flex items-center justify-center">
+              <div className="w-6 h-6 border-2 border-green-400 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+            <h3 className="text-xl font-semibold mb-2">Scale Your Business</h3>
+            <p className="text-gray-300 text-sm">Grow faster with intelligent automation</p>
+          </div>
+        </div>
+        
+        <div className="animate-bounce">
           <ArrowDown 
             className="mx-auto cursor-pointer opacity-70 hover:opacity-100 transition-opacity" 
             size={32}
