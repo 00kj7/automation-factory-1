@@ -63,7 +63,7 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
       
       <CardFooter>
         <Button 
-          className="w-full bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 text-white"
+          className="w-full bg-gradient-to-r from-black via-purple-600 to-red-600 hover:from-gray-800 hover:via-purple-700 hover:to-red-700 text-white"
           onClick={() => window.open(url, '_blank')}
         >
           <ExternalLink className="mr-2 h-4 w-4" />
