@@ -1,6 +1,5 @@
-
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Brain, Zap } from "lucide-react";
+import { ArrowDown, ArrowUp, Brain, Zap } from "lucide-react";
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -20,7 +19,8 @@ const Hero = () => {
         {/* Rounded badge */}
         <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8 animate-fade-in-up">
           <Brain className="text-purple-300" size={24} />
-          <span className="text-lg font-medium">AI Automation Systems</span>
+          <span className="text-lg font-medium">70 premium systems</span>
+          <ArrowUp className="text-white" size={20} />
           <Zap className="text-red-300" size={24} />
         </div>
         
@@ -36,20 +36,13 @@ const Hero = () => {
           Streamline workflows, boost productivity, and scale your operations effortlessly.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+        <div className="flex justify-center mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button 
             size="lg" 
             className="bg-white text-purple-900 hover:bg-gray-100 text-lg px-8 py-4 rounded-full"
             onClick={scrollToProducts}
           >
             Explore Products
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-white text-white hover:bg-white hover:text-purple-900 text-lg px-8 py-4 rounded-full"
-          >
-            Get Started
           </Button>
         </div>
         
