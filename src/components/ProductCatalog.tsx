@@ -85,88 +85,97 @@ const ProductCatalog = () => {
   const getCategory = (title: string) => {
     const lowerTitle = title.toLowerCase();
     
-    // Follow-up & Conversion Tools
-    if (lowerTitle.includes('high ticket email') || lowerTitle.includes('instagram ai messaging') || 
-        lowerTitle.includes('email handling') || lowerTitle.includes('proposal automation') ||
-        lowerTitle.includes('personalized outreach') || lowerTitle.includes('referral autoresponder') ||
-        lowerTitle.includes('email personalization')) {
-      return 'Follow-up & Conversion Tools';
+    // AI Assistants & Agents
+    if (lowerTitle.includes('slack ai assistant') || lowerTitle.includes('email handling ai assistant') ||
+        lowerTitle.includes('voice ai agent') || lowerTitle.includes('ai assistant will manage') ||
+        lowerTitle.includes('ai sales agent') || lowerTitle.includes('ai linkedin agent') ||
+        lowerTitle.includes('ai agent finder') || lowerTitle.includes('customer feedback ai assistant') ||
+        lowerTitle.includes('reputation management ai assistant') || lowerTitle.includes('discovery call form') ||
+        lowerTitle.includes('post call')) {
+      return 'AI Assistants & Agents';
     }
     
-    // Sales & Revenue Tools
-    if (lowerTitle.includes('ai sales agent') || lowerTitle.includes('lead conversion') ||
-        lowerTitle.includes('discovery call') || lowerTitle.includes('reputation management')) {
-      return 'Sales & Revenue Tools';
+    // Email Marketing & Outreach
+    if (lowerTitle.includes('high ticket email') || lowerTitle.includes('email personalization') ||
+        lowerTitle.includes('personalized outreach') || lowerTitle.includes('personalized video outreach') ||
+        lowerTitle.includes('referral autoresponder') || lowerTitle.includes('automated newsletter') ||
+        lowerTitle.includes('email finder system') || lowerTitle.includes('proposal automation')) {
+      return 'Email Marketing & Outreach';
     }
     
-    // Operations & Organization Tools
-    if (lowerTitle.includes('slack') || lowerTitle.includes('clickup') || lowerTitle.includes('onboarding') ||
-        lowerTitle.includes('payment tracking') || lowerTitle.includes('payroll') || 
-        lowerTitle.includes('waitlist') || lowerTitle.includes('photography crm') ||
-        lowerTitle.includes('post call') || lowerTitle.includes('trello')) {
-      return 'Operations & Organization Tools';
+    // Lead Generation & CRM
+    if (lowerTitle.includes('lead conversion') || lowerTitle.includes('lead researcher') ||
+        lowerTitle.includes('lead qualification') || lowerTitle.includes('find') && lowerTitle.includes('leads') ||
+        lowerTitle.includes('first step into ai') || lowerTitle.includes('5 n8n scenarios') ||
+        lowerTitle.includes('4 workflows') || lowerTitle.includes('photography crm')) {
+      return 'Lead Generation & CRM';
     }
     
-    // Content Writing & Generation Tools
-    if (lowerTitle.includes('content creation') || lowerTitle.includes('content engine') ||
-        lowerTitle.includes('content strategist') || lowerTitle.includes('content architect') ||
-        lowerTitle.includes('blog') || lowerTitle.includes('wordpress') || lowerTitle.includes('claude ai')) {
-      return 'Content Writing & Generation Tools';
+    // Content Creation & SEO
+    if (lowerTitle.includes('content creation') || lowerTitle.includes('content architect') ||
+        lowerTitle.includes('content strategist') || lowerTitle.includes('content engine') ||
+        lowerTitle.includes('content system blueprint') || lowerTitle.includes('blog system') ||
+        lowerTitle.includes('make 1,000+ blogs') || lowerTitle.includes('claude ai') ||
+        lowerTitle.includes('youtube content idea') || lowerTitle.includes('wordpress content') ||
+        lowerTitle.includes('social media + blog') || lowerTitle.includes('social media content blueprint') ||
+        lowerTitle.includes('seo wordpress')) {
+      return 'Content Creation & SEO';
     }
     
-    // Video & Image Tools
-    if (lowerTitle.includes('video') || lowerTitle.includes('animated') || lowerTitle.includes('voice ai') ||
-        lowerTitle.includes('avatar') || lowerTitle.includes('heygen') || lowerTitle.includes('elevenlabs') ||
-        lowerTitle.includes('translates')) {
-      return 'Video & Image Tools';
+    // Video & Media Automation
+    if (lowerTitle.includes('translates any video') || lowerTitle.includes('animated ai influencer') ||
+        lowerTitle.includes('avatar that works') || lowerTitle.includes('heygen') || lowerTitle.includes('elevenlabs') ||
+        lowerTitle.includes('voice bot flow') || lowerTitle.includes('yt parasite')) {
+      return 'Video & Media Automation';
     }
     
-    // SEO & Optimization Tools
-    if (lowerTitle.includes('seo') || lowerTitle.includes('parasite') || lowerTitle.includes('search intent')) {
-      return 'SEO & Optimization Tools';
+    // Recruitment & HR Automation
+    if (lowerTitle.includes('resume screening') || lowerTitle.includes('recruitment cv') ||
+        lowerTitle.includes('hiring pipeline') || lowerTitle.includes('payroll system')) {
+      return 'Recruitment & HR Automation';
     }
     
-    // Research & Analysis Tools
-    if (lowerTitle.includes('competitive analysis') || lowerTitle.includes('email finder') ||
-        lowerTitle.includes('find') && lowerTitle.includes('leads') || lowerTitle.includes('lead researcher') ||
-        lowerTitle.includes('lead qualification') || lowerTitle.includes('personalization')) {
-      return 'Research & Analysis Tools';
+    // Workflow Automation & Project Management
+    if (lowerTitle.includes('project commander') || lowerTitle.includes('clickup project') ||
+        lowerTitle.includes('chatbot with rag') || lowerTitle.includes('n8n email') ||
+        lowerTitle.includes('client onboarding') || lowerTitle.includes('payment completed') ||
+        lowerTitle.includes('waitlist management') || lowerTitle.includes('payment tracking') ||
+        lowerTitle.includes('trello')) {
+      return 'Workflow Automation & Project Management';
     }
     
-    // HR & Recruitment Tools
-    if (lowerTitle.includes('recruitment') || lowerTitle.includes('cv') || lowerTitle.includes('resume') ||
-        lowerTitle.includes('screening')) {
-      return 'HR & Recruitment Tools';
+    // Competitive Intelligence & Strategy
+    if (lowerTitle.includes('competitive analysis') || lowerTitle.includes('deep personalization') ||
+        lowerTitle.includes('search intent') && !lowerTitle.includes('email finder')) {
+      return 'Competitive Intelligence & Strategy';
     }
     
-    // AI Agents & Workflows Tools
-    if (lowerTitle.includes('ai assistant') || lowerTitle.includes('chatbot') || lowerTitle.includes('n8n') ||
-        lowerTitle.includes('ai agent') || lowerTitle.includes('automation') || lowerTitle.includes('workflow') ||
-        lowerTitle.includes('rag') || lowerTitle.includes('make.com')) {
-      return 'AI Agents & Workflows Tools';
+    // SEO & Traffic Growth Hacks
+    if (lowerTitle.includes('parasite seo') || lowerTitle.includes('linkedin ai parasite')) {
+      return 'SEO & Traffic Growth Hacks';
     }
     
-    // Social Media Tools
-    if (lowerTitle.includes('viral ads') || lowerTitle.includes('social media') ||
-        lowerTitle.includes('youtube') || lowerTitle.includes('linkedin') || lowerTitle.includes('yt parasite')) {
-      return 'Social Media Tools';
+    // Instagram & Social Media
+    if (lowerTitle.includes('instagram ai messaging') || lowerTitle.includes('viral ads') ||
+        lowerTitle.includes('social media') && !lowerTitle.includes('blog')) {
+      return 'Instagram & Social Media';
     }
     
-    return 'Operations & Organization Tools';
+    return 'AI Assistants & Agents';
   };
 
   const categories = [
-    'all', 
-    'Follow-up & Conversion Tools',
-    'Sales & Revenue Tools', 
-    'Operations & Organization Tools',
-    'Content Writing & Generation Tools',
-    'Video & Image Tools',
-    'SEO & Optimization Tools',
-    'Research & Analysis Tools',
-    'HR & Recruitment Tools',
-    'AI Agents & Workflows Tools',
-    'Social Media Tools'
+    'all',
+    'AI Assistants & Agents',
+    'Email Marketing & Outreach',
+    'Lead Generation & CRM',
+    'Content Creation & SEO',
+    'Video & Media Automation',
+    'Recruitment & HR Automation',
+    'Workflow Automation & Project Management',
+    'Competitive Intelligence & Strategy',
+    'SEO & Traffic Growth Hacks',
+    'Instagram & Social Media'
   ];
 
   const filteredProducts = allProducts.filter(product => {
