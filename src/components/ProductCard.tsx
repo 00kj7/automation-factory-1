@@ -15,88 +15,88 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
   const getCategory = (title: string) => {
     const lowerTitle = title.toLowerCase();
     
-    // أدوات أتمتة التسويق والمبيعات - أدوات المتابعة والتحويل
+    // Follow-up & Conversion Tools
     if (lowerTitle.includes('high ticket email') || lowerTitle.includes('instagram ai messaging') || 
         lowerTitle.includes('email handling') || lowerTitle.includes('proposal automation') ||
         lowerTitle.includes('personalized outreach') || lowerTitle.includes('referral autoresponder') ||
         lowerTitle.includes('email personalization')) {
-      return '🔁 أدوات المتابعة والتحويل';
+      return 'Follow-up & Conversion Tools';
     }
     
-    // أدوات أتمتة التسويق والمبيعات - أدوات المبيعات والربح
+    // Sales & Revenue Tools
     if (lowerTitle.includes('ai sales agent') || lowerTitle.includes('lead conversion') ||
         lowerTitle.includes('discovery call') || lowerTitle.includes('reputation management')) {
-      return '💰 أدوات المبيعات والربح';
+      return 'Sales & Revenue Tools';
     }
     
-    // أدوات أتمتة العمليات والتنظيم
+    // Operations & Organization Tools
     if (lowerTitle.includes('slack') || lowerTitle.includes('clickup') || lowerTitle.includes('onboarding') ||
         lowerTitle.includes('payment tracking') || lowerTitle.includes('payroll') || 
         lowerTitle.includes('waitlist') || lowerTitle.includes('photography crm') ||
         lowerTitle.includes('post call') || lowerTitle.includes('trello')) {
-      return '🧩 أدوات أتمتة العمليات والتنظيم';
+      return 'Operations & Organization Tools';
     }
     
-    // أدوات صناعة المحتوى والتسويق الرقمي - كتابة وتوليد المحتوى
+    // Content Writing & Generation Tools
     if (lowerTitle.includes('content creation') || lowerTitle.includes('content engine') ||
         lowerTitle.includes('content strategist') || lowerTitle.includes('content architect') ||
         lowerTitle.includes('blog') || lowerTitle.includes('wordpress') || lowerTitle.includes('claude ai')) {
-      return '✍️ أدوات كتابة وتوليد المحتوى';
+      return 'Content Writing & Generation Tools';
     }
     
-    // أدوات صناعة المحتوى والتسويق الرقمي - الفيديو والصور
+    // Video & Image Tools
     if (lowerTitle.includes('video') || lowerTitle.includes('animated') || lowerTitle.includes('voice ai') ||
         lowerTitle.includes('avatar') || lowerTitle.includes('heygen') || lowerTitle.includes('elevenlabs') ||
         lowerTitle.includes('translates')) {
-      return '📹 أدوات الفيديو والصور';
+      return 'Video & Image Tools';
     }
     
-    // أدوات صناعة المحتوى والتسويق الرقمي - SEO والتحسين
+    // SEO & Optimization Tools
     if (lowerTitle.includes('seo') || lowerTitle.includes('parasite') || lowerTitle.includes('search intent')) {
-      return '📊 أدوات SEO والتحسين';
+      return 'SEO & Optimization Tools';
     }
     
-    // أدوات البحث والتحليل
+    // Research & Analysis Tools
     if (lowerTitle.includes('competitive analysis') || lowerTitle.includes('email finder') ||
         lowerTitle.includes('find') && lowerTitle.includes('leads') || lowerTitle.includes('lead researcher') ||
         lowerTitle.includes('lead qualification') || lowerTitle.includes('personalization')) {
-      return '🔍 أدوات البحث والتحليل';
+      return 'Research & Analysis Tools';
     }
     
-    // أدوات التوظيف والموارد البشرية
+    // HR & Recruitment Tools
     if (lowerTitle.includes('recruitment') || lowerTitle.includes('cv') || lowerTitle.includes('resume') ||
         lowerTitle.includes('screening')) {
-      return '🧑‍💼 أدوات التوظيف والموارد البشرية';
+      return 'HR & Recruitment Tools';
     }
     
-    // أدوات AI Agents و Workflows
+    // AI Agents & Workflows Tools
     if (lowerTitle.includes('ai assistant') || lowerTitle.includes('chatbot') || lowerTitle.includes('n8n') ||
         lowerTitle.includes('ai agent') || lowerTitle.includes('automation') || lowerTitle.includes('workflow') ||
         lowerTitle.includes('rag') || lowerTitle.includes('make.com')) {
-      return '🔧 أدوات AI Agents و Workflows';
+      return 'AI Agents & Workflows Tools';
     }
     
-    // أدوات السوشيال ميديا
+    // Social Media Tools
     if (lowerTitle.includes('viral ads') || lowerTitle.includes('social media') ||
         lowerTitle.includes('youtube') || lowerTitle.includes('linkedin') || lowerTitle.includes('yt parasite')) {
-      return '📱 أدوات السوشيال ميديا';
+      return 'Social Media Tools';
     }
     
-    return '🧩 أدوات أتمتة العمليات والتنظيم';
+    return 'Operations & Organization Tools';
   };
 
   const categoryColor = (cat: string) => {
     switch (cat) {
-      case '🔁 أدوات المتابعة والتحويل': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case '💰 أدوات المبيعات والربح': return 'bg-green-100 text-green-800 border-green-200';
-      case '🧩 أدوات أتمتة العمليات والتنظيم': return 'bg-purple-100 text-purple-800 border-purple-200';
-      case '✍️ أدوات كتابة وتوليد المحتوى': return 'bg-orange-100 text-orange-800 border-orange-200';
-      case '📹 أدوات الفيديو والصور': return 'bg-pink-100 text-pink-800 border-pink-200';
-      case '📊 أدوات SEO والتحسين': return 'bg-red-100 text-red-800 border-red-200';
-      case '🔍 أدوات البحث والتحليل': return 'bg-indigo-100 text-indigo-800 border-indigo-200';
-      case '🧑‍💼 أدوات التوظيف والموارد البشرية': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case '🔧 أدوات AI Agents و Workflows': return 'bg-teal-100 text-teal-800 border-teal-200';
-      case '📱 أدوات السوشيال ميديا': return 'bg-cyan-100 text-cyan-800 border-cyan-200';
+      case 'Follow-up & Conversion Tools': return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'Sales & Revenue Tools': return 'bg-green-100 text-green-800 border-green-200';
+      case 'Operations & Organization Tools': return 'bg-purple-100 text-purple-800 border-purple-200';
+      case 'Content Writing & Generation Tools': return 'bg-orange-100 text-orange-800 border-orange-200';
+      case 'Video & Image Tools': return 'bg-pink-100 text-pink-800 border-pink-200';
+      case 'SEO & Optimization Tools': return 'bg-red-100 text-red-800 border-red-200';
+      case 'Research & Analysis Tools': return 'bg-indigo-100 text-indigo-800 border-indigo-200';
+      case 'HR & Recruitment Tools': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'AI Agents & Workflows Tools': return 'bg-teal-100 text-teal-800 border-teal-200';
+      case 'Social Media Tools': return 'bg-cyan-100 text-cyan-800 border-cyan-200';
       default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
