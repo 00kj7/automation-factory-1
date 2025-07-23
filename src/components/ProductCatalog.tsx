@@ -83,17 +83,91 @@ const ProductCatalog = () => {
   ];
 
   const getCategory = (title: string) => {
-    if (title.toLowerCase().includes('email')) return 'Email Automation';
-    if (title.toLowerCase().includes('content')) return 'Content Creation';
-    if (title.toLowerCase().includes('lead')) return 'Lead Generation';
-    if (title.toLowerCase().includes('social') || title.toLowerCase().includes('instagram') || title.toLowerCase().includes('linkedin')) return 'Social Media';
-    if (title.toLowerCase().includes('seo') || title.toLowerCase().includes('blog')) return 'SEO & Content';
-    if (title.toLowerCase().includes('recruitment') || title.toLowerCase().includes('cv') || title.toLowerCase().includes('resume')) return 'HR & Recruitment';
-    if (title.toLowerCase().includes('payment') || title.toLowerCase().includes('payroll')) return 'Finance';
-    return 'Business Automation';
+    const lowerTitle = title.toLowerCase();
+    
+    // أدوات أتمتة التسويق والمبيعات - أدوات المتابعة والتحويل
+    if (lowerTitle.includes('high ticket email') || lowerTitle.includes('instagram ai messaging') || 
+        lowerTitle.includes('email handling') || lowerTitle.includes('proposal automation') ||
+        lowerTitle.includes('personalized outreach') || lowerTitle.includes('referral autoresponder') ||
+        lowerTitle.includes('email personalization')) {
+      return '🔁 أدوات المتابعة والتحويل';
+    }
+    
+    // أدوات أتمتة التسويق والمبيعات - أدوات المبيعات والربح
+    if (lowerTitle.includes('ai sales agent') || lowerTitle.includes('lead conversion') ||
+        lowerTitle.includes('discovery call') || lowerTitle.includes('reputation management')) {
+      return '💰 أدوات المبيعات والربح';
+    }
+    
+    // أدوات أتمتة العمليات والتنظيم
+    if (lowerTitle.includes('slack') || lowerTitle.includes('clickup') || lowerTitle.includes('onboarding') ||
+        lowerTitle.includes('payment tracking') || lowerTitle.includes('payroll') || 
+        lowerTitle.includes('waitlist') || lowerTitle.includes('photography crm') ||
+        lowerTitle.includes('post call') || lowerTitle.includes('trello')) {
+      return '🧩 أدوات أتمتة العمليات والتنظيم';
+    }
+    
+    // أدوات صناعة المحتوى والتسويق الرقمي - كتابة وتوليد المحتوى
+    if (lowerTitle.includes('content creation') || lowerTitle.includes('content engine') ||
+        lowerTitle.includes('content strategist') || lowerTitle.includes('content architect') ||
+        lowerTitle.includes('blog') || lowerTitle.includes('wordpress') || lowerTitle.includes('claude ai')) {
+      return '✍️ أدوات كتابة وتوليد المحتوى';
+    }
+    
+    // أدوات صناعة المحتوى والتسويق الرقمي - الفيديو والصور
+    if (lowerTitle.includes('video') || lowerTitle.includes('animated') || lowerTitle.includes('voice ai') ||
+        lowerTitle.includes('avatar') || lowerTitle.includes('heygen') || lowerTitle.includes('elevenlabs') ||
+        lowerTitle.includes('translates')) {
+      return '📹 أدوات الفيديو والصور';
+    }
+    
+    // أدوات صناعة المحتوى والتسويق الرقمي - SEO والتحسين
+    if (lowerTitle.includes('seo') || lowerTitle.includes('parasite') || lowerTitle.includes('search intent')) {
+      return '📊 أدوات SEO والتحسين';
+    }
+    
+    // أدوات البحث والتحليل
+    if (lowerTitle.includes('competitive analysis') || lowerTitle.includes('email finder') ||
+        lowerTitle.includes('find') && lowerTitle.includes('leads') || lowerTitle.includes('lead researcher') ||
+        lowerTitle.includes('lead qualification') || lowerTitle.includes('personalization')) {
+      return '🔍 أدوات البحث والتحليل';
+    }
+    
+    // أدوات التوظيف والموارد البشرية
+    if (lowerTitle.includes('recruitment') || lowerTitle.includes('cv') || lowerTitle.includes('resume') ||
+        lowerTitle.includes('screening')) {
+      return '🧑‍💼 أدوات التوظيف والموارد البشرية';
+    }
+    
+    // أدوات AI Agents و Workflows
+    if (lowerTitle.includes('ai assistant') || lowerTitle.includes('chatbot') || lowerTitle.includes('n8n') ||
+        lowerTitle.includes('ai agent') || lowerTitle.includes('automation') || lowerTitle.includes('workflow') ||
+        lowerTitle.includes('rag') || lowerTitle.includes('make.com')) {
+      return '🔧 أدوات AI Agents و Workflows';
+    }
+    
+    // أدوات السوشيال ميديا
+    if (lowerTitle.includes('viral ads') || lowerTitle.includes('social media') ||
+        lowerTitle.includes('youtube') || lowerTitle.includes('linkedin') || lowerTitle.includes('yt parasite')) {
+      return '📱 أدوات السوشيال ميديا';
+    }
+    
+    return '🧩 أدوات أتمتة العمليات والتنظيم';
   };
 
-  const categories = ['all', 'Email Automation', 'Content Creation', 'Lead Generation', 'Social Media', 'SEO & Content', 'HR & Recruitment', 'Finance', 'Business Automation'];
+  const categories = [
+    'all', 
+    '🔁 أدوات المتابعة والتحويل',
+    '💰 أدوات المبيعات والربح', 
+    '🧩 أدوات أتمتة العمليات والتنظيم',
+    '✍️ أدوات كتابة وتوليد المحتوى',
+    '📹 أدوات الفيديو والصور',
+    '📊 أدوات SEO والتحسين',
+    '🔍 أدوات البحث والتحليل',
+    '🧑‍💼 أدوات التوظيف والموارد البشرية',
+    '🔧 أدوات AI Agents و Workflows',
+    '📱 أدوات السوشيال ميديا'
+  ];
 
   const filteredProducts = allProducts.filter(product => {
     const matchesSearch = product.title.toLowerCase().includes(searchTerm.toLowerCase());
@@ -130,7 +204,7 @@ const ProductCatalog = () => {
               <SelectContent>
                 {categories.map((category) => (
                   <SelectItem key={category} value={category}>
-                    {category === 'all' ? 'All Categories' : category}
+                    {category === 'all' ? 'جميع التصنيفات' : category}
                   </SelectItem>
                 ))}
               </SelectContent>
