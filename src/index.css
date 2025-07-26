@@ -6,65 +6,65 @@
 /* AI Automation system color palette with new specified theme */
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 210 40% 98%;
+    --background: 224 39% 7%;
+    --foreground: 213 27% 84%;
 
-    --card: 215 25% 27%;
-    --card-foreground: 210 40% 98%;
+    --card: 249 26% 15%;
+    --card-foreground: 213 27% 84%;
 
-    --popover: 215 25% 27%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 249 26% 15%;
+    --popover-foreground: 213 27% 84%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 259 94% 51%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 186 100% 69%;
-    --secondary-foreground: 222 84% 5%;
+    --secondary: 189 100% 53%;
+    --secondary-foreground: 224 39% 7%;
 
-    --muted: 215 28% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 249 26% 15%;
+    --muted-foreground: 215 25% 65%;
 
-    --accent: 186 100% 69%;
-    --accent-foreground: 222 84% 5%;
+    --accent: 323 89% 59%;
+    --accent-foreground: 213 27% 84%;
 
-    --destructive: 330 81% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 323 89% 59%;
+    --destructive-foreground: 213 27% 84%;
 
-    --border: 215 25% 27%;
-    --input: 215 25% 27%;
-    --ring: 217 91% 60%;
+    --border: 249 26% 15%;
+    --input: 249 26% 15%;
+    --ring: 259 94% 51%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 222 84% 5%;
-    --foreground: 210 40% 98%;
+    --background: 224 39% 7%;
+    --foreground: 213 27% 84%;
 
-    --card: 215 25% 27%;
-    --card-foreground: 210 40% 98%;
+    --card: 249 26% 15%;
+    --card-foreground: 213 27% 84%;
 
-    --popover: 215 25% 27%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 249 26% 15%;
+    --popover-foreground: 213 27% 84%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 259 94% 51%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 186 100% 69%;
-    --secondary-foreground: 222 84% 5%;
+    --secondary: 189 100% 53%;
+    --secondary-foreground: 224 39% 7%;
 
-    --muted: 215 28% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 249 26% 15%;
+    --muted-foreground: 215 25% 65%;
 
-    --accent: 186 100% 69%;
-    --accent-foreground: 222 84% 5%;
+    --accent: 323 89% 59%;
+    --accent-foreground: 213 27% 84%;
 
-    --destructive: 330 81% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 323 89% 59%;
+    --destructive-foreground: 213 27% 84%;
 
-    --border: 215 25% 27%;
-    --input: 215 25% 27%;
-    --ring: 217 91% 60%;
+    --border: 249 26% 15%;
+    --input: 249 26% 15%;
+    --ring: 259 94% 51%;
   }
 }
 
@@ -81,20 +81,20 @@
 
 /* AI Automation system gradients with new color theme */
 .gradient-purple-red {
-  background: linear-gradient(135deg, #0F172A 0%, #1E293B 30%, #3B82F6 70%, #0F172A 100%);
+  background: linear-gradient(135deg, #0B0F19 0%, #1E1B32 30%, #8B5CF6 70%, #0B0F19 100%);
 }
 
 .gradient-card {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.1) 30%, rgba(59, 130, 246, 0.1) 70%, rgba(15, 23, 42, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(11, 15, 25, 0.1) 0%, rgba(30, 27, 50, 0.1) 30%, rgba(139, 92, 246, 0.1) 70%, rgba(11, 15, 25, 0.05) 100%);
 }
 
-/* Electric blue accent gradients */
+/* Purple accent gradients */
 .gradient-black-red {
-  background: linear-gradient(135deg, #0F172A 0%, #3B82F6 100%);
+  background: linear-gradient(135deg, #0B0F19 0%, #8B5CF6 100%);
 }
 
 .gradient-red-crimson {
-  background: linear-gradient(135deg, #3B82F6 0%, #22D3EE 100%);
+  background: linear-gradient(135deg, #8B5CF6 0%, #0FF0FC 100%);
 }
 
 /* Animations */
