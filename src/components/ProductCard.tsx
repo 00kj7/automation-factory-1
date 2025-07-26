@@ -96,48 +96,48 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
 
   const categoryColor = (cat: string) => {
     switch (cat) {
-      case 'AI Assistants & Agents': return 'bg-purple-100 text-purple-800 border-purple-200';
-      case 'Email Marketing & Outreach': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'Lead Generation & CRM': return 'bg-green-100 text-green-800 border-green-200';
-      case 'Content Creation & SEO': return 'bg-orange-100 text-orange-800 border-orange-200';
-      case 'Video & Media Automation': return 'bg-pink-100 text-pink-800 border-pink-200';
-      case 'Recruitment & HR Automation': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'Workflow Automation & Project Management': return 'bg-teal-100 text-teal-800 border-teal-200';
-      case 'Competitive Intelligence & Strategy': return 'bg-indigo-100 text-indigo-800 border-indigo-200';
-      case 'SEO & Traffic Growth Hacks': return 'bg-red-100 text-red-800 border-red-200';
-      case 'Instagram & Social Media': return 'bg-cyan-100 text-cyan-800 border-cyan-200';
-      default: return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'AI Assistants & Agents': return 'bg-primary/10 text-primary border-primary/20';
+      case 'Email Marketing & Outreach': return 'bg-secondary/10 text-secondary border-secondary/20';
+      case 'Lead Generation & CRM': return 'bg-accent/10 text-accent border-accent/20';
+      case 'Content Creation & SEO': return 'bg-destructive/10 text-destructive border-destructive/20';
+      case 'Video & Media Automation': return 'bg-primary/10 text-primary border-primary/20';
+      case 'Recruitment & HR Automation': return 'bg-secondary/10 text-secondary border-secondary/20';
+      case 'Workflow Automation & Project Management': return 'bg-accent/10 text-accent border-accent/20';
+      case 'Competitive Intelligence & Strategy': return 'bg-primary/10 text-primary border-primary/20';
+      case 'SEO & Traffic Growth Hacks': return 'bg-destructive/10 text-destructive border-destructive/20';
+      case 'Instagram & Social Media': return 'bg-secondary/10 text-secondary border-secondary/20';
+      default: return 'bg-muted/10 text-muted-foreground border-muted/20';
     }
   };
 
   const cardCategory = category || getCategory(title);
 
   return (
-    <Card className={`h-full hover:shadow-xl transition-all duration-300 hover:scale-105 ${featured ? 'ring-2 ring-purple-500' : ''} gradient-card border-0`}>
+    <Card className={`h-full hover:shadow-xl transition-all duration-300 hover:scale-105 ${featured ? 'ring-2 ring-primary' : ''} gradient-card border-0`}>
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
-            <Bot className="h-5 w-5 text-purple-600" />
-            {featured && <Zap className="h-4 w-4 text-yellow-500" />}
+            <Bot className="h-5 w-5 text-primary" />
+            {featured && <Zap className="h-4 w-4 text-secondary" />}
           </div>
           <Badge variant="outline" className={categoryColor(cardCategory)}>
             {cardCategory}
           </Badge>
         </div>
-        <CardTitle className="text-lg leading-tight text-gray-900">
+        <CardTitle className="text-lg leading-tight text-foreground">
           {title}
         </CardTitle>
       </CardHeader>
       
       <CardContent className="flex-1">
-        <CardDescription className="text-gray-600">
+        <CardDescription className="text-muted-foreground">
           AI-powered automation solution designed to streamline your workflow and boost productivity.
         </CardDescription>
       </CardContent>
       
       <CardFooter>
         <Button 
-          className="w-full bg-gradient-to-r from-black via-purple-900 to-purple-700 hover:from-gray-800 hover:via-purple-800 hover:to-purple-600 text-white"
+          className="w-full bg-gradient-black-red hover:opacity-90 text-primary-foreground"
           onClick={() => window.open(url, '_blank')}
         >
           <ExternalLink className="mr-2 h-4 w-4" />

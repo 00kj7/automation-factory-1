@@ -22,13 +22,13 @@ const FeaturedProducts = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-20 px-6 bg-muted">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
             Featured AI Systems
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Our most popular automation solutions that are transforming businesses worldwide
           </p>
         </div>
