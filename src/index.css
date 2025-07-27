@@ -3,34 +3,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AI Automation system color palette with new specified theme */
+/* AI Automation system color palette with beautiful color distribution */
 @layer base {
   :root {
-    --background: 224 39% 7%;
-    --foreground: 213 27% 84%;
+    /* Core backgrounds - Dark Carbon Black & Deep Purple Grey */
+    --background: 224 39% 7%;        /* #0B0F19 - Main Background */
+    --foreground: 210 17% 89%;        /* #E2E8F0 - Light Silver Grey */
 
-    --card: 249 26% 15%;
-    --card-foreground: 213 27% 84%;
+    --card: 249 26% 15%;              /* #1E1B32 - Deep Purple Grey */
+    --card-foreground: 210 17% 89%;   /* #E2E8F0 - Light Silver Grey */
 
     --popover: 249 26% 15%;
-    --popover-foreground: 213 27% 84%;
+    --popover-foreground: 210 17% 89%;
 
-    --primary: 259 94% 51%;
+    /* Primary - Electric Purple */
+    --primary: 259 94% 51%;           /* #8B5CF6 - Electric Purple */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 189 100% 53%;
+    /* Secondary - Neon Turquoise Blue */  
+    --secondary: 189 100% 53%;        /* #0FF0FC - Neon Turquoise Blue */
     --secondary-foreground: 224 39% 7%;
 
+    /* Muted backgrounds */
     --muted: 249 26% 15%;
-    --muted-foreground: 215 25% 65%;
+    --muted-foreground: 215 20% 58%;  /* #94A3B8 - Medium Purple Grey */
 
-    --accent: 323 89% 59%;
-    --accent-foreground: 213 27% 84%;
+    /* Accent - Neon Pink */
+    --accent: 323 89% 59%;            /* #FF2D95 - Neon Pink */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 323 89% 59%;
-    --destructive-foreground: 213 27% 84%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 249 26% 15%;
+    /* Category-specific colors for beautiful distribution */
+    --category-ai: 259 94% 51%;       /* Electric Purple - AI Assistants */
+    --category-email: 189 100% 53%;   /* Neon Turquoise - Email Marketing */
+    --category-leads: 323 89% 59%;    /* Neon Pink - Lead Generation */
+    --category-content: 44 97% 60%;   /* Bright Yellow - Content Creation */
+    --category-video: 283 74% 64%;    /* Purple Variant - Video & Media */
+    --category-hr: 15 95% 68%;        /* Orange - HR & Recruitment */
+    --category-workflow: 165 100% 60%; /* Cyan - Workflow Automation */
+    --category-strategy: 270 100% 75%; /* Light Purple - Strategy */
+
+    --border: 249 26% 20%;
     --input: 249 26% 15%;
     --ring: 259 94% 51%;
 
@@ -79,22 +94,47 @@
   }
 }
 
-/* AI Automation system gradients with new color theme */
-.gradient-purple-red {
-  background: linear-gradient(135deg, #0B0F19 0%, #1E1B32 30%, #8B5CF6 70%, #0B0F19 100%);
+/* Beautiful gradient system using the full color palette */
+.gradient-hero {
+  background: linear-gradient(135deg, #0B0F19 0%, #1E1B32 20%, #8B5CF6 40%, #0FF0FC 60%, #FF2D95 80%, #0B0F19 100%);
 }
 
 .gradient-card {
-  background: linear-gradient(135deg, rgba(11, 15, 25, 0.1) 0%, rgba(30, 27, 50, 0.1) 30%, rgba(139, 92, 246, 0.1) 70%, rgba(11, 15, 25, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(11, 15, 25, 0.9) 0%, rgba(30, 27, 50, 0.8) 50%, rgba(139, 92, 246, 0.1) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.2);
 }
 
-/* Purple accent gradients */
-.gradient-black-red {
-  background: linear-gradient(135deg, #0B0F19 0%, #8B5CF6 100%);
+.gradient-featured {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(15, 255, 252, 0.1) 50%, rgba(255, 45, 149, 0.1) 100%);
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #8B5CF6, #0FF0FC, #FF2D95) 1;
 }
 
-.gradient-red-crimson {
-  background: linear-gradient(135deg, #8B5CF6 0%, #0FF0FC 100%);
+/* Category-specific gradients */
+.gradient-ai {
+  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+}
+
+.gradient-email {
+  background: linear-gradient(135deg, #0FF0FC 0%, #06B6D4 100%);
+}
+
+.gradient-leads {
+  background: linear-gradient(135deg, #FF2D95 0%, #EC4899 100%);
+}
+
+.gradient-content {
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+}
+
+/* Interactive hover gradients */
+.gradient-hover {
+  background: linear-gradient(135deg, #8B5CF6 0%, #0FF0FC 50%, #FF2D95 100%);
+}
+
+/* Section background variants */
+.gradient-section-alt {
+  background: linear-gradient(180deg, rgba(11, 15, 25, 0.95) 0%, rgba(30, 27, 50, 0.5) 100%);
 }
 
 /* Animations */

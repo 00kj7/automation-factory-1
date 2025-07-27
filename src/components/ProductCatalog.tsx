@@ -204,7 +204,7 @@ const ProductCatalog = () => {
     <section id="products" className="py-20 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4">
             Complete AI Automation Catalog
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">

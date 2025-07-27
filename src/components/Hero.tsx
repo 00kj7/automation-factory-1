@@ -9,7 +9,7 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
-      <div className="absolute inset-0 gradient-purple-red opacity-90"></div>
+      <div className="absolute inset-0 gradient-hero opacity-90"></div>
       
       {/* Animated background elements */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-card opacity-20 rounded-full animate-float"></div>
@@ -39,7 +39,7 @@ const Hero = () => {
         <div className="flex justify-center mb-12 sm:mb-16 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground border border-border/20 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full"
+            className="bg-gradient-to-r from-primary via-secondary to-accent hover:from-accent hover:via-primary hover:to-secondary text-white border border-border/20 text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-500 hover:scale-105"
             onClick={scrollToProducts}
           >
             Explore Products

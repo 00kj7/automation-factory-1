@@ -96,24 +96,45 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
 
   const categoryColor = (cat: string) => {
     switch (cat) {
-      case 'AI Assistants & Agents': return 'bg-primary/10 text-primary border-primary/20';
-      case 'Email Marketing & Outreach': return 'bg-secondary/10 text-secondary border-secondary/20';
-      case 'Lead Generation & CRM': return 'bg-accent/10 text-accent border-accent/20';
-      case 'Content Creation & SEO': return 'bg-destructive/10 text-destructive border-destructive/20';
-      case 'Video & Media Automation': return 'bg-primary/10 text-primary border-primary/20';
-      case 'Recruitment & HR Automation': return 'bg-secondary/10 text-secondary border-secondary/20';
-      case 'Workflow Automation & Project Management': return 'bg-accent/10 text-accent border-accent/20';
-      case 'Competitive Intelligence & Strategy': return 'bg-primary/10 text-primary border-primary/20';
-      case 'SEO & Traffic Growth Hacks': return 'bg-destructive/10 text-destructive border-destructive/20';
-      case 'Instagram & Social Media': return 'bg-secondary/10 text-secondary border-secondary/20';
-      default: return 'bg-muted/10 text-muted-foreground border-muted/20';
+      case 'AI Assistants & Agents': 
+        return 'bg-[hsl(259_94%_51%)] text-white border-[hsl(259_94%_61%)]';
+      case 'Email Marketing & Outreach': 
+        return 'bg-[hsl(189_100%_53%)] text-[hsl(224_39%_7%)] border-[hsl(189_100%_63%)]';
+      case 'Lead Generation & CRM': 
+        return 'bg-[hsl(323_89%_59%)] text-white border-[hsl(323_89%_69%)]';
+      case 'Content Creation & SEO': 
+        return 'bg-[hsl(44_97%_60%)] text-[hsl(224_39%_7%)] border-[hsl(44_97%_70%)]';
+      case 'Video & Media Automation': 
+        return 'bg-[hsl(283_74%_64%)] text-white border-[hsl(283_74%_74%)]';
+      case 'Recruitment & HR Automation': 
+        return 'bg-[hsl(15_95%_68%)] text-white border-[hsl(15_95%_78%)]';
+      case 'Workflow Automation & Project Management': 
+        return 'bg-[hsl(165_100%_60%)] text-[hsl(224_39%_7%)] border-[hsl(165_100%_70%)]';
+      case 'Competitive Intelligence & Strategy': 
+        return 'bg-[hsl(270_100%_75%)] text-[hsl(224_39%_7%)] border-[hsl(270_100%_85%)]';
+      case 'SEO & Traffic Growth Hacks': 
+        return 'bg-[hsl(44_97%_60%)] text-[hsl(224_39%_7%)] border-[hsl(44_97%_70%)]';
+      case 'Instagram & Social Media': 
+        return 'bg-[hsl(189_100%_53%)] text-[hsl(224_39%_7%)] border-[hsl(189_100%_63%)]';
+      default: 
+        return 'bg-muted/10 text-muted-foreground border-muted/20';
     }
   };
 
   const cardCategory = category || getCategory(title);
 
+  const getCategoryGradient = (cat: string) => {
+    switch (cat) {
+      case 'AI Assistants & Agents': return 'hover:bg-gradient-to-br hover:from-[hsl(259_94%_51%_/_0.1)] hover:to-[hsl(259_94%_51%_/_0.05)]';
+      case 'Email Marketing & Outreach': return 'hover:bg-gradient-to-br hover:from-[hsl(189_100%_53%_/_0.1)] hover:to-[hsl(189_100%_53%_/_0.05)]';
+      case 'Lead Generation & CRM': return 'hover:bg-gradient-to-br hover:from-[hsl(323_89%_59%_/_0.1)] hover:to-[hsl(323_89%_59%_/_0.05)]';
+      case 'Content Creation & SEO': return 'hover:bg-gradient-to-br hover:from-[hsl(44_97%_60%_/_0.1)] hover:to-[hsl(44_97%_60%_/_0.05)]';
+      default: return 'hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10';
+    }
+  };
+
   return (
-    <Card className={`h-full hover:shadow-xl transition-all duration-300 hover:scale-105 ${featured ? 'ring-2 ring-primary' : ''} gradient-card border-0`}>
+    <Card className={`h-full hover:shadow-xl transition-all duration-300 hover:scale-105 ${featured ? 'gradient-featured' : 'gradient-card'} ${getCategoryGradient(cardCategory)} border-0`}>
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -137,7 +158,7 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
       
       <CardFooter>
         <Button 
-          className="w-full bg-gradient-black-red hover:opacity-90 text-primary-foreground"
+          className="w-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-accent hover:via-primary hover:to-secondary text-white transition-all duration-500 hover:scale-105"
           onClick={() => window.open(url, '_blank')}
         >
           <ExternalLink className="mr-2 h-4 w-4" />

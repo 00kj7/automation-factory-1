@@ -22,10 +22,10 @@ const FeaturedProducts = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted">
+    <section className="py-20 px-6 gradient-section-alt">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4">
             Featured AI Systems
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
