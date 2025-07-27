@@ -3,83 +3,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AI Automation system color palette with beautiful color distribution */
+/* Beautiful Natural Color Palette - Green, Olive, Red, Navy */
 @layer base {
   :root {
-    /* Core backgrounds - Dark Carbon Black & Deep Purple Grey */
-    --background: 224 39% 7%;        /* #0B0F19 - Main Background */
-    --foreground: 210 17% 89%;        /* #E2E8F0 - Light Silver Grey */
+    /* Core backgrounds - Dark Navy & Olive Green */
+    --background: 210 25% 8%;         /* Deep Navy - Main Background */
+    --foreground: 80 15% 85%;         /* Light Green Grey - Main Text */
 
-    --card: 249 26% 15%;              /* #1E1B32 - Deep Purple Grey */
-    --card-foreground: 210 17% 89%;   /* #E2E8F0 - Light Silver Grey */
+    --card: 80 20% 25%;               /* Olive Green - Cards */
+    --card-foreground: 80 15% 85%;    /* Light Green Grey */
 
-    --popover: 249 26% 15%;
-    --popover-foreground: 210 17% 89%;
+    --popover: 80 20% 25%;
+    --popover-foreground: 80 15% 85%;
 
-    /* Primary - Electric Purple */
-    --primary: 259 94% 51%;           /* #8B5CF6 - Electric Purple */
+    /* Primary - Vibrant Red */
+    --primary: 0 75% 55%;             /* Vibrant Red */
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Neon Turquoise Blue */  
-    --secondary: 189 100% 53%;        /* #0FF0FC - Neon Turquoise Blue */
-    --secondary-foreground: 224 39% 7%;
+    /* Secondary - Light Green */  
+    --secondary: 80 35% 75%;          /* Light Green */
+    --secondary-foreground: 210 25% 8%;
 
     /* Muted backgrounds */
-    --muted: 249 26% 15%;
-    --muted-foreground: 215 20% 58%;  /* #94A3B8 - Medium Purple Grey */
+    --muted: 80 20% 25%;
+    --muted-foreground: 80 10% 60%;   /* Medium Green Grey */
 
-    /* Accent - Neon Pink */
-    --accent: 323 89% 59%;            /* #FF2D95 - Neon Pink */
+    /* Accent - Olive Green */
+    --accent: 80 20% 45%;             /* Olive Green */
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 323 89% 59%;
+    --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
     /* Category-specific colors for beautiful distribution */
-    --category-ai: 259 94% 51%;       /* Electric Purple - AI Assistants */
-    --category-email: 189 100% 53%;   /* Neon Turquoise - Email Marketing */
-    --category-leads: 323 89% 59%;    /* Neon Pink - Lead Generation */
-    --category-content: 44 97% 60%;   /* Bright Yellow - Content Creation */
-    --category-video: 283 74% 64%;    /* Purple Variant - Video & Media */
-    --category-hr: 15 95% 68%;        /* Orange - HR & Recruitment */
-    --category-workflow: 165 100% 60%; /* Cyan - Workflow Automation */
-    --category-strategy: 270 100% 75%; /* Light Purple - Strategy */
+    --category-ai: 0 75% 55%;         /* Red - AI Assistants */
+    --category-email: 80 35% 75%;     /* Light Green - Email Marketing */
+    --category-leads: 0 60% 45%;      /* Dark Red - Lead Generation */
+    --category-content: 80 50% 60%;   /* Medium Green - Content Creation */
+    --category-video: 0 50% 35%;      /* Burgundy - Video & Media */
+    --category-hr: 80 30% 50%;        /* Olive - HR & Recruitment */
+    --category-workflow: 80 40% 65%;  /* Light Olive - Workflow Automation */
+    --category-strategy: 0 45% 40%;   /* Deep Red - Strategy */
 
-    --border: 249 26% 20%;
-    --input: 249 26% 15%;
-    --ring: 259 94% 51%;
+    --border: 80 15% 30%;
+    --input: 80 20% 20%;
+    --ring: 0 75% 55%;
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 224 39% 7%;
-    --foreground: 213 27% 84%;
+    --background: 210 25% 8%;
+    --foreground: 80 15% 85%;
 
-    --card: 249 26% 15%;
-    --card-foreground: 213 27% 84%;
+    --card: 80 20% 25%;
+    --card-foreground: 80 15% 85%;
 
-    --popover: 249 26% 15%;
-    --popover-foreground: 213 27% 84%;
+    --popover: 80 20% 25%;
+    --popover-foreground: 80 15% 85%;
 
-    --primary: 259 94% 51%;
+    --primary: 0 75% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 189 100% 53%;
-    --secondary-foreground: 224 39% 7%;
+    --secondary: 80 35% 75%;
+    --secondary-foreground: 210 25% 8%;
 
-    --muted: 249 26% 15%;
-    --muted-foreground: 215 25% 65%;
+    --muted: 80 20% 25%;
+    --muted-foreground: 80 10% 60%;
 
-    --accent: 323 89% 59%;
-    --accent-foreground: 213 27% 84%;
+    --accent: 80 20% 45%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 323 89% 59%;
-    --destructive-foreground: 213 27% 84%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 249 26% 15%;
-    --input: 249 26% 15%;
-    --ring: 259 94% 51%;
+    --border: 80 15% 30%;
+    --input: 80 20% 20%;
+    --ring: 0 75% 55%;
   }
 }
 
@@ -94,47 +94,47 @@
   }
 }
 
-/* Beautiful gradient system using the full color palette */
+/* Beautiful Natural Gradient System */
 .gradient-hero {
-  background: linear-gradient(135deg, #0B0F19 0%, #1E1B32 20%, #8B5CF6 40%, #0FF0FC 60%, #FF2D95 80%, #0B0F19 100%);
+  background: linear-gradient(135deg, hsl(210, 25%, 8%) 0%, hsl(80, 20%, 25%) 20%, hsl(0, 75%, 55%) 40%, hsl(80, 35%, 75%) 60%, hsl(80, 20%, 45%) 80%, hsl(210, 25%, 8%) 100%);
 }
 
 .gradient-card {
-  background: linear-gradient(135deg, rgba(11, 15, 25, 0.9) 0%, rgba(30, 27, 50, 0.8) 50%, rgba(139, 92, 246, 0.1) 100%);
-  border: 1px solid rgba(139, 92, 246, 0.2);
+  background: linear-gradient(135deg, hsla(210, 25%, 8%, 0.9) 0%, hsla(80, 20%, 25%, 0.8) 50%, hsla(0, 75%, 55%, 0.1) 100%);
+  border: 1px solid hsla(0, 75%, 55%, 0.2);
 }
 
 .gradient-featured {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(15, 255, 252, 0.1) 50%, rgba(255, 45, 149, 0.1) 100%);
+  background: linear-gradient(135deg, hsla(0, 75%, 55%, 0.1) 0%, hsla(80, 35%, 75%, 0.1) 50%, hsla(80, 20%, 45%, 0.1) 100%);
   border: 2px solid;
-  border-image: linear-gradient(135deg, #8B5CF6, #0FF0FC, #FF2D95) 1;
+  border-image: linear-gradient(135deg, hsl(0, 75%, 55%), hsl(80, 35%, 75%), hsl(80, 20%, 45%)) 1;
 }
 
 /* Category-specific gradients */
 .gradient-ai {
-  background: linear-gradient(135deg, #8B5CF6 0%, #A855F7 100%);
+  background: linear-gradient(135deg, hsl(0, 75%, 55%) 0%, hsl(0, 60%, 45%) 100%);
 }
 
 .gradient-email {
-  background: linear-gradient(135deg, #0FF0FC 0%, #06B6D4 100%);
+  background: linear-gradient(135deg, hsl(80, 35%, 75%) 0%, hsl(80, 30%, 65%) 100%);
 }
 
 .gradient-leads {
-  background: linear-gradient(135deg, #FF2D95 0%, #EC4899 100%);
+  background: linear-gradient(135deg, hsl(0, 60%, 45%) 0%, hsl(0, 50%, 35%) 100%);
 }
 
 .gradient-content {
-  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  background: linear-gradient(135deg, hsl(80, 50%, 60%) 0%, hsl(80, 40%, 50%) 100%);
 }
 
 /* Interactive hover gradients */
 .gradient-hover {
-  background: linear-gradient(135deg, #8B5CF6 0%, #0FF0FC 50%, #FF2D95 100%);
+  background: linear-gradient(135deg, hsl(0, 75%, 55%) 0%, hsl(80, 35%, 75%) 50%, hsl(80, 20%, 45%) 100%);
 }
 
 /* Section background variants */
 .gradient-section-alt {
-  background: linear-gradient(180deg, rgba(11, 15, 25, 0.95) 0%, rgba(30, 27, 50, 0.5) 100%);
+  background: linear-gradient(180deg, hsla(210, 25%, 8%, 0.95) 0%, hsla(80, 20%, 25%, 0.5) 100%);
 }
 
 /* Animations */

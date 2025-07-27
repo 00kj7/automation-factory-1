@@ -97,25 +97,25 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
   const categoryColor = (cat: string) => {
     switch (cat) {
       case 'AI Assistants & Agents': 
-        return 'bg-[hsl(259_94%_51%)] text-white border-[hsl(259_94%_61%)]';
+        return 'bg-[hsl(0_75%_55%)] text-white border-[hsl(0_75%_65%)]';
       case 'Email Marketing & Outreach': 
-        return 'bg-[hsl(189_100%_53%)] text-[hsl(224_39%_7%)] border-[hsl(189_100%_63%)]';
+        return 'bg-[hsl(80_35%_75%)] text-[hsl(210_25%_8%)] border-[hsl(80_35%_85%)]';
       case 'Lead Generation & CRM': 
-        return 'bg-[hsl(323_89%_59%)] text-white border-[hsl(323_89%_69%)]';
+        return 'bg-[hsl(0_60%_45%)] text-white border-[hsl(0_60%_55%)]';
       case 'Content Creation & SEO': 
-        return 'bg-[hsl(44_97%_60%)] text-[hsl(224_39%_7%)] border-[hsl(44_97%_70%)]';
+        return 'bg-[hsl(80_50%_60%)] text-[hsl(210_25%_8%)] border-[hsl(80_50%_70%)]';
       case 'Video & Media Automation': 
-        return 'bg-[hsl(283_74%_64%)] text-white border-[hsl(283_74%_74%)]';
+        return 'bg-[hsl(0_50%_35%)] text-white border-[hsl(0_50%_45%)]';
       case 'Recruitment & HR Automation': 
-        return 'bg-[hsl(15_95%_68%)] text-white border-[hsl(15_95%_78%)]';
+        return 'bg-[hsl(80_30%_50%)] text-white border-[hsl(80_30%_60%)]';
       case 'Workflow Automation & Project Management': 
-        return 'bg-[hsl(165_100%_60%)] text-[hsl(224_39%_7%)] border-[hsl(165_100%_70%)]';
+        return 'bg-[hsl(80_40%_65%)] text-[hsl(210_25%_8%)] border-[hsl(80_40%_75%)]';
       case 'Competitive Intelligence & Strategy': 
-        return 'bg-[hsl(270_100%_75%)] text-[hsl(224_39%_7%)] border-[hsl(270_100%_85%)]';
+        return 'bg-[hsl(0_45%_40%)] text-white border-[hsl(0_45%_50%)]';
       case 'SEO & Traffic Growth Hacks': 
-        return 'bg-[hsl(44_97%_60%)] text-[hsl(224_39%_7%)] border-[hsl(44_97%_70%)]';
+        return 'bg-[hsl(80_50%_60%)] text-[hsl(210_25%_8%)] border-[hsl(80_50%_70%)]';
       case 'Instagram & Social Media': 
-        return 'bg-[hsl(189_100%_53%)] text-[hsl(224_39%_7%)] border-[hsl(189_100%_63%)]';
+        return 'bg-[hsl(80_35%_75%)] text-[hsl(210_25%_8%)] border-[hsl(80_35%_85%)]';
       default: 
         return 'bg-muted/10 text-muted-foreground border-muted/20';
     }
@@ -125,10 +125,10 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
 
   const getCategoryGradient = (cat: string) => {
     switch (cat) {
-      case 'AI Assistants & Agents': return 'hover:bg-gradient-to-br hover:from-[hsl(259_94%_51%_/_0.1)] hover:to-[hsl(259_94%_51%_/_0.05)]';
-      case 'Email Marketing & Outreach': return 'hover:bg-gradient-to-br hover:from-[hsl(189_100%_53%_/_0.1)] hover:to-[hsl(189_100%_53%_/_0.05)]';
-      case 'Lead Generation & CRM': return 'hover:bg-gradient-to-br hover:from-[hsl(323_89%_59%_/_0.1)] hover:to-[hsl(323_89%_59%_/_0.05)]';
-      case 'Content Creation & SEO': return 'hover:bg-gradient-to-br hover:from-[hsl(44_97%_60%_/_0.1)] hover:to-[hsl(44_97%_60%_/_0.05)]';
+      case 'AI Assistants & Agents': return 'hover:bg-gradient-to-br hover:from-[hsl(0_75%_55%_/_0.1)] hover:to-[hsl(0_75%_55%_/_0.05)]';
+      case 'Email Marketing & Outreach': return 'hover:bg-gradient-to-br hover:from-[hsl(80_35%_75%_/_0.1)] hover:to-[hsl(80_35%_75%_/_0.05)]';
+      case 'Lead Generation & CRM': return 'hover:bg-gradient-to-br hover:from-[hsl(0_60%_45%_/_0.1)] hover:to-[hsl(0_60%_45%_/_0.05)]';
+      case 'Content Creation & SEO': return 'hover:bg-gradient-to-br hover:from-[hsl(80_50%_60%_/_0.1)] hover:to-[hsl(80_50%_60%_/_0.05)]';
       default: return 'hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10';
     }
   };
