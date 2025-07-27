@@ -96,69 +96,48 @@ const ProductCard = ({ title, url, featured = false, category }: ProductCardProp
 
   const categoryColor = (cat: string) => {
     switch (cat) {
-      case 'AI Assistants & Agents': 
-        return 'bg-[hsl(0_75%_55%)] text-white border-[hsl(0_75%_65%)]';
-      case 'Email Marketing & Outreach': 
-        return 'bg-[hsl(80_35%_75%)] text-[hsl(210_25%_8%)] border-[hsl(80_35%_85%)]';
-      case 'Lead Generation & CRM': 
-        return 'bg-[hsl(0_60%_45%)] text-white border-[hsl(0_60%_55%)]';
-      case 'Content Creation & SEO': 
-        return 'bg-[hsl(80_50%_60%)] text-[hsl(210_25%_8%)] border-[hsl(80_50%_70%)]';
-      case 'Video & Media Automation': 
-        return 'bg-[hsl(0_50%_35%)] text-white border-[hsl(0_50%_45%)]';
-      case 'Recruitment & HR Automation': 
-        return 'bg-[hsl(80_30%_50%)] text-white border-[hsl(80_30%_60%)]';
-      case 'Workflow Automation & Project Management': 
-        return 'bg-[hsl(80_40%_65%)] text-[hsl(210_25%_8%)] border-[hsl(80_40%_75%)]';
-      case 'Competitive Intelligence & Strategy': 
-        return 'bg-[hsl(0_45%_40%)] text-white border-[hsl(0_45%_50%)]';
-      case 'SEO & Traffic Growth Hacks': 
-        return 'bg-[hsl(80_50%_60%)] text-[hsl(210_25%_8%)] border-[hsl(80_50%_70%)]';
-      case 'Instagram & Social Media': 
-        return 'bg-[hsl(80_35%_75%)] text-[hsl(210_25%_8%)] border-[hsl(80_35%_85%)]';
-      default: 
-        return 'bg-muted/10 text-muted-foreground border-muted/20';
+      case 'AI Assistants & Agents': return 'bg-purple-100 text-purple-800 border-purple-200';
+      case 'Email Marketing & Outreach': return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'Lead Generation & CRM': return 'bg-green-100 text-green-800 border-green-200';
+      case 'Content Creation & SEO': return 'bg-orange-100 text-orange-800 border-orange-200';
+      case 'Video & Media Automation': return 'bg-pink-100 text-pink-800 border-pink-200';
+      case 'Recruitment & HR Automation': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'Workflow Automation & Project Management': return 'bg-teal-100 text-teal-800 border-teal-200';
+      case 'Competitive Intelligence & Strategy': return 'bg-indigo-100 text-indigo-800 border-indigo-200';
+      case 'SEO & Traffic Growth Hacks': return 'bg-red-100 text-red-800 border-red-200';
+      case 'Instagram & Social Media': return 'bg-cyan-100 text-cyan-800 border-cyan-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
   const cardCategory = category || getCategory(title);
 
-  const getCategoryGradient = (cat: string) => {
-    switch (cat) {
-      case 'AI Assistants & Agents': return 'hover:bg-gradient-to-br hover:from-[hsl(0_75%_55%_/_0.1)] hover:to-[hsl(0_75%_55%_/_0.05)]';
-      case 'Email Marketing & Outreach': return 'hover:bg-gradient-to-br hover:from-[hsl(80_35%_75%_/_0.1)] hover:to-[hsl(80_35%_75%_/_0.05)]';
-      case 'Lead Generation & CRM': return 'hover:bg-gradient-to-br hover:from-[hsl(0_60%_45%_/_0.1)] hover:to-[hsl(0_60%_45%_/_0.05)]';
-      case 'Content Creation & SEO': return 'hover:bg-gradient-to-br hover:from-[hsl(80_50%_60%_/_0.1)] hover:to-[hsl(80_50%_60%_/_0.05)]';
-      default: return 'hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10';
-    }
-  };
-
   return (
-    <Card className={`h-full hover:shadow-xl transition-all duration-300 hover:scale-105 ${featured ? 'gradient-featured' : 'gradient-card'} ${getCategoryGradient(cardCategory)} border-0`}>
+    <Card className={`h-full hover:shadow-xl transition-all duration-300 hover:scale-105 ${featured ? 'ring-2 ring-purple-500' : ''} gradient-card border-0`}>
       <CardHeader className="pb-4">
         <div className="flex items-start justify-between mb-2">
           <div className="flex items-center gap-2">
-            <Bot className="h-5 w-5 text-primary" />
-            {featured && <Zap className="h-4 w-4 text-secondary" />}
+            <Bot className="h-5 w-5 text-purple-600" />
+            {featured && <Zap className="h-4 w-4 text-yellow-500" />}
           </div>
           <Badge variant="outline" className={categoryColor(cardCategory)}>
             {cardCategory}
           </Badge>
         </div>
-        <CardTitle className="text-lg leading-tight text-foreground">
+        <CardTitle className="text-lg leading-tight text-gray-900">
           {title}
         </CardTitle>
       </CardHeader>
       
       <CardContent className="flex-1">
-        <CardDescription className="text-muted-foreground">
+        <CardDescription className="text-gray-600">
           AI-powered automation solution designed to streamline your workflow and boost productivity.
         </CardDescription>
       </CardContent>
       
       <CardFooter>
         <Button 
-          className="w-full bg-gradient-to-r from-primary via-secondary to-accent hover:from-accent hover:via-primary hover:to-secondary text-white transition-all duration-500 hover:scale-105"
+          className="w-full bg-gradient-to-r from-black via-purple-900 to-purple-700 hover:from-gray-800 hover:via-purple-800 hover:to-purple-600 text-white"
           onClick={() => window.open(url, '_blank')}
         >
           <ExternalLink className="mr-2 h-4 w-4" />

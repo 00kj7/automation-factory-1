@@ -201,13 +201,13 @@ const ProductCatalog = () => {
   });
 
   return (
-    <section id="products" className="py-20 px-6 bg-background">
+    <section id="products" className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
             Complete AI Automation Catalog
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Discover our comprehensive collection of AI-powered business automation solutions
           </p>
           
@@ -249,7 +249,7 @@ const ProductCatalog = () => {
 
         {filteredProducts.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-xl text-muted-foreground">No products found matching your criteria.</p>
+            <p className="text-xl text-gray-500">No products found matching your criteria.</p>
             <Button 
               variant="outline" 
               className="mt-4"
