@@ -3,74 +3,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Very dark navy blue color palette */
+/* Custom color palette with dark purple, dark red, black, and white */
 @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 220 100% 5%;
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 100% 5%;
+    --card-foreground: 222.2 84% 4.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 100% 5%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 220 100% 8%;
+    --primary: 262 83% 22%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 100% 15%;
+    --secondary: 345 78% 30%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 220 100% 8%;
+    --accent: 262 83% 22%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 220 100% 8%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262 83% 22%;
 
     --radius: 0.5rem;
-
-    /* Very dark navy gradient colors */
-    --navy-darkest: 220 100% 3%;
-    --navy-dark: 220 100% 8%;
-    --navy-medium: 210 100% 15%;
-    --accent-blue: 200 100% 25%;
   }
 
   .dark {
-    --background: 220 100% 3%;
+    --background: 0 0% 3%;
     --foreground: 0 0% 98%;
 
-    --card: 220 100% 5%;
+    --card: 0 0% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 100% 5%;
+    --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 100% 15%;
-    --primary-foreground: 220 100% 3%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 3%;
 
-    --secondary: 200 100% 25%;
-    --secondary-foreground: 220 100% 3%;
+    --secondary: 345 78% 30%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 100% 8%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 200 100% 25%;
-    --accent-foreground: 220 100% 3%;
+    --accent: 345 78% 30%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 63% 31%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 100% 8%;
-    --input: 220 100% 8%;
-    --ring: 200 100% 25%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 345 78% 30%;
   }
 }
 
@@ -85,30 +79,22 @@
   }
 }
 
-/* Very dark navy blue gradient backgrounds */
-.gradient-navy-hero {
-  background: linear-gradient(135deg, 
-    hsl(220, 100%, 3%) 0%, 
-    hsl(220, 100%, 8%) 30%, 
-    hsl(210, 100%, 15%) 70%, 
-    hsl(220, 100%, 3%) 100%);
+/* Custom gradient backgrounds with black integration */
+.gradient-purple-red {
+  background: linear-gradient(135deg, #000000 0%, #4c1d95 30%, #7c2d12 70%, #000000 100%);
 }
 
-.gradient-navy-card {
-  background: linear-gradient(135deg, 
-    hsla(220, 100%, 3%, 0.1) 0%, 
-    hsla(220, 100%, 8%, 0.1) 30%, 
-    hsla(210, 100%, 15%, 0.1) 70%, 
-    hsla(220, 100%, 3%, 0.05) 100%);
+.gradient-card {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(76, 29, 149, 0.1) 30%, rgba(124, 45, 18, 0.1) 70%, rgba(0, 0, 0, 0.05) 100%);
 }
 
-/* Very dark navy accent gradients */
-.gradient-navy-dark {
-  background: linear-gradient(135deg, hsl(220, 100%, 3%) 0%, hsl(220, 100%, 8%) 100%);
+/* Black accent gradients */
+.gradient-black-purple {
+  background: linear-gradient(135deg, #000000 0%, #4c1d95 100%);
 }
 
-.gradient-navy-light {
-  background: linear-gradient(135deg, hsl(220, 100%, 8%) 0%, hsl(210, 100%, 15%) 100%);
+.gradient-black-red {
+  background: linear-gradient(135deg, #000000 0%, #7c2d12 100%);
 }
 
 /* Animations */
