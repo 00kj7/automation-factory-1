@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowUp, Zap } from "lucide-react";
+import { ArrowDown, ArrowUp, Zap, TrendingUp, Globe } from "lucide-react";
 
 const Hero = () => {
   const scrollToProducts = () => {
@@ -54,14 +54,12 @@ const Hero = () => {
             <p className="text-gray-300 text-sm">Advanced artificial intelligence systems</p>
           </div>
           <div className="bg-black/10 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 text-center">
-            <Zap className="mx-auto mb-4 text-yellow-400" size={32} />
+            <TrendingUp className="mx-auto mb-4 text-blue-400" size={32} />
             <h3 className="text-lg sm:text-xl font-semibold mb-2">Fully Automated</h3>
             <p className="text-gray-300 text-sm">Set it up once, let it work for you</p>
           </div>
           <div className="bg-black/10 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 text-center">
-            <div className="mx-auto mb-4 w-8 h-8 flex items-center justify-center">
-              <div className="w-6 h-6 border-2 border-green-400 border-t-transparent rounded-full animate-spin"></div>
-            </div>
+            <Globe className="mx-auto mb-4 text-green-400" size={32} />
             <h3 className="text-lg sm:text-xl font-semibold mb-2">Scale Your Business</h3>
             <p className="text-gray-300 text-sm">Grow faster with intelligent automation</p>
           </div>
